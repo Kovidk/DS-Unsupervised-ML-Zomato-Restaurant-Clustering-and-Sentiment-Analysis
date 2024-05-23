@@ -50,7 +50,7 @@ Zomato is an Indian restaurant aggregator and food delivery start-up founded by 
 * The restaurant with highest average rating from the given dataset is AB’s –Absolute Barbecues with a rating of 4.88
 
 # Summary
-Clustering of the dataset was done by k means clustering initially. The number of clusters was found out with the help of elbow curve and Silhouette coefficient method. The optimum number of clusters was found as 6 since it is the point after which elbow gradient stabilises and silhouette coefficient is more. The 5 clusters were formed based on their cost per head. Their cluster distribution was visualised with respect to cost, number of cuisines and name of restaurant. Then hierarchical clustering was done with the number of clusters specified as 5. The number of clusters were taken as 6 as we could use it to compliment our clustering done through K means. 
+Clustering of the dataset was done by k means clustering initially. The number of clusters was found out with the help of elbow curve and Silhouette coefficient method. The optimum number of clusters was found as 6 since it is the point after which elbow gradient stabilises and silhouette coefficient is more. The 5 clusters were formed based on their cost per head. Their cluster distribution was visualised with respect to cost, number of cuisines and name of restaurant. Then hierarchical clustering was done with the number of clusters specified as 5. The number of clusters were taken as 5 as we could use it to compliment our clustering done through K means. 
 
 The sentiment analysis of review column is to be done, before doing so the following transformations are done.
 * Removing urls from dataset
@@ -66,4 +66,5 @@ Then the text was converted from words into numbers by the process called Vector
 * For clustering, we have decided on 5 clusters after the Silhouette score plot and elbow plot where we used KMeans clustering algorithm.
 For Sentiment Analysis we have implemented five different models to predict the sentiment of Reviews. Logistic Regression, Random Forest Classifier, Decision Tree, K Nearest Neighbour and Xgboost Classifier.
 * Sometimes people give good rating even when their reviews are bad or negative
-* Logistic Regression and Random Forest model performed the best among them. In this way, we can explore more from various textual data and Reviews. Our models will try to predict the various sentiments correctly.
+* Logistic Regression have highest Test Accuracy and Precision of 86.84% and 78.57%, but XGBoost has highest auc-roc score of 93.07%. In this way, we can explore more from various textual data and Reviews. Our models will try to predict the various sentiments correctly.
+* XGBoost is preferred over Logistic Regression because it achieves the highest area under the ROC curve (AUC-ROC) score of 93.07%, indicating better overall performance in distinguishing between the classes. While Logistic Regression exhibits high accuracy and precision, XGBoost demonstrates superior discriminatory power, making it the preferred choice for classification tasks.
